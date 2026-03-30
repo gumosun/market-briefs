@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>市場週報 — 第二期 | 2026-03-30</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans TC', 'Noto Sans', sans-serif;
+    background: #f5f5f5;
+    color: #1a1a1a;
+    line-height: 1.8;
+  }
+
+  header {
+    background: #1A1A1A;
+    color: #fff;
+    padding: 48px 40px 36px;
+  }
+  header .label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #F47920;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  header h1 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  header .meta {
+    font-size: 14px;
+    color: #aaa;
+  }
+
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 40px 24px;
+  }
+
+  .section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  }
+
+  .section-title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #F47920;
+    margin-bottom: 20px;
+  }
+
+  .highlight-list {
+    list-style: none;
+    padding: 0;
+  }
+  .highlight-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  .highlight-list li:last-child { border-bottom: none; }
+  .highlight-list .bullet {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #F47920;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+    flex-shrink: 0;
+  }
+
+  .news-item {
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .news-item:last-child { border-bottom: none; }
+
+  .news-platform {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #F47920;
+    margin-bottom: 6px;
+  }
+
+  .news-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+
+  .news-body {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 10px;
+  }
+
+  a.news-source {
+    font-size: 13px;
+    color: #aaa;
+    text-decoration: none;
+    border-bottom: 1px dashed #ddd;
+    transition: color 0.2s;
+  }
+  a.news-source:hover { color: #F47920; border-bottom-color: #F47920; }
+
+  .recommendation-item {
+    padding: 16px 20px;
+    border-left: 3px solid #F47920;
+    background: #fff8f3;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 14px;
+  }
+  .recommendation-item:last-child { margin-bottom: 0; }
+  .recommendation-item .rec-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 6px;
+  }
+  .recommendation-item .rec-body {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+  }
+
+  .watchlist {
+    list-style: none;
+    padding: 0;
+  }
+  .watchlist li {
+    font-size: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+    color: #444;
+    line-height: 1.7;
+  }
+  .watchlist li:last-child { border-bottom: none; }
+  .watchlist li::before {
+    content: "→";
+    color: #F47920;
+    font-weight: 700;
+    margin-right: 8px;
+  }
+
+  .badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: #fff3e8;
+    color: #F47920;
+    margin-left: 8px;
+    vertical-align: middle;
+    letter-spacing: 0.5px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 32px;
+    font-size: 13px;
+    color: #bbb;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="label">SHōW YŌU · 市場週報</div>
+  <h1>AI 技術、競品動態與 Creator Economy — 第二期</h1>
+  <div class="meta">2026 年 3 月 23 日 – 3 月 30 日 &nbsp;·&nbsp; 產出日期：2026-03-30</div>
+</header>
+
+<div class="container">
+
+  <!-- 本週重點摘要 -->
+  <div class="section">
+    <div class="section-title">本週重點摘要</div>
+    <ul class="highlight-list">
+      <li><span class="bullet"></span><strong>Anthropic 洩漏次世代模型 Claude Mythos</strong>——性能被形容為「step change」，大幅超越 Opus 4.6，但同時也伴隨前所未有的網路安全風險警告，外界關注後續發布時程。</li>
+      <li><span class="bullet"></span><strong>Meta 推出 Creator Fast Track 砸錢搶人</strong>——針對 Instagram、TikTok、YouTube 百萬粉絲創作者提供三個月保底 $3,000/月，直接對創作者招手，顯示平台間創作者爭奪白熱化。</li>
+      <li><span class="bullet"></span><strong>Substack 宣布全面直播功能</strong>——桌機免 RTMP 直播 + 錄製工作室，Substack 正式從訂閱電子報跨界直播，與 Patreon 的競爭升溫。</li>
+      <li><span class="bullet"></span><strong>Anthropic 調整使用量限制</strong>——Claude Pro/Max 限制收緊，顯示需求端爆炸性成長正在壓迫基礎設施容量。</li>
+      <li><span class="bullet"></span><strong>17LIVE x STAR RISE AUDITION 啟動</strong>——3 月 29 日展開，提供直播主音樂出道機會，顯示直播平台持續深化創作者職涯發展路徑。</li>
+    </ul>
+  </div>
+
+  <!-- AI 技術與工具落地 -->
+  <div class="section">
+    <div class="section-title">AI 技術與工具落地</div>
+
+    <div class="news-item">
+      <div class="news-platform">Anthropic</div>
+      <div class="news-title">Claude Mythos 意外洩漏：被稱「step change」但具前所未有網路安全風險 <span class="badge">本週重大</span></div>
+      <div class="news-body">
+        3 月 26 日，Anthropic 的 CMS 設定錯誤導致近 3,000 筆未發布內容公開可搜尋，其中包含一份關於新模型 "Claude Mythos"（代號 Capybara）的草稿部落格文章。根據洩漏內容，這個模型在程式碼、學術推理、網路安全測試上的得分遠超 Claude Opus 4.6，Anthropic 內部形容為「a step change」——代表整個 Opus 系列之上的新層級。但同一份文件也警告，Mythos 在尋找與利用軟體漏洞方面的能力極強，可能加速網路軍備競賽，Anthropic 因此正在評估安全性後才決定是否公開發布。這是近期 AI 能力邊界爭論最具代表性的事件之一。
+      </div>
+      <a class="news-source" href="https://fortune.com/2026/03/26/anthropic-says-testing-mythos-powerful-new-ai-model-after-data-leak-reveals-its-existence-step-change-in-capabilities/" target="_blank">來源：Fortune — Exclusive: Anthropic 'Mythos' AI model revealed in data leak →</a>
+      &nbsp;&nbsp;
+      <a class="news-source" href="https://the-decoder.com/anthropic-leak-reveals-new-model-claude-mythos-with-dramatically-higher-scores-on-tests-than-any-previous-model/" target="_blank">來源：The Decoder — Anthropic leak reveals Claude Mythos →</a>
+    </div>
+
+    <div class="news-item">
+      <div class="news-platform">Anthropic</div>
+      <div class="news-title">Anthropic 收緊 Claude 使用量限制，顯示需求端強勁壓力</div>
+      <div class="news-body">
+        3 月 26 日，Anthropic 調整了 Claude Pro 與 Max 訂閱方案的使用量上限。這個動作通常是容量管理信號，意味著當前基礎設施承受的推理請求已達臨界值。Anthropic 今年 3 月至今已連續發布超過 14 個功能更新（包含 Computer Use、Claude Code 網頁版、Excel/PowerPoint 整合、視覺化功能），同時 MCP 協議安裝量突破 9,700 萬次，整體使用量的爆炸性成長造成容量壓力。
+      </div>
+      <a class="news-source" href="https://www.theregister.com/2026/03/26/anthropic_tweaks_usage_limits/" target="_blank">來源：The Register — Anthropic tweaks Claude usage limits to manage capacity →</a>
+    </div>
+
+    <div class="news-item">
+      <div class="news-platform">AI 工具生態</div>
+      <div class="news-title">3 月 AI 工具密集爆發：Picsart AI Agent Marketplace 對創作者最直接相關</div>
+      <div class="news-body">
+        本週 AI 工具持續密集落地。其中對創作者平台最直接相關的是 Picsart 推出的 AI Agent Marketplace，讓創作者可以部署專門處理圖片調整、視覺 remix、電商商品圖編輯、店面優化等任務的專屬 AI 助手。這是「AI 降低創作工具門檻」趨勢的具體落地，也說明中小型創作工具平台正積極搶在 Adobe、Canva 之前佔領 AI agent 入口。此外 NVIDIA Agent Toolkit 也在本月推出，開放企業自訂 AI agent 能力。
+      </div>
+      <a class="news-source" href="https://www.buildfastwithai.com/blogs/ai-tools-developers-march-2026" target="_blank">來源：BuildFastWithAI — 7 AI Tools That Changed Developer Workflow (March 2026) →</a>
+    </div>
+  </div>
+
+  <!-- 競品動態 -->
+  <div class="section">
+    <div class="section-title">競品動態</div>
+
+    <div class="news-item">
+      <div class="news-platform">Meta / Facebook</div>
+      <div class="news-title">Creator Fast Track：百萬粉創作者三個月保底 $3,000/月，正面搶人 <span class="badge">本週重大</span></div>
+      <div class="news-body">
+        3 月 18 日，Meta 宣布 Creator Fast Track 計畫，針對在 Instagram、TikTok 或 YouTube 至少有一個平台擁有 100 萬以上粉絲的創作者，提供三個月的保底收入：10 萬粉以上 $1,000/月、100 萬粉以上 $3,000/月。三個月期滿後，創作者將自動加入 Facebook Content Monetization 計畫並獲得永久觸及加成。Facebook 2025 年全年創作者分潤支出接近 30 億美元，年增 35%。這個動作明顯是直接對 TikTok 和 YouTube 的頭部創作者招手，也反映 Meta 在 creator acquisition 上願意用現金砸短期換長期生態。
+      </div>
+      <a class="news-source" href="https://techcrunch.com/2026/03/18/facebook-launches-a-new-monetization-program-to-attract-popular-creators-from-tiktok-youtube/" target="_blank">來源：TechCrunch — Facebook launches new monetization program to attract creators →</a>
+      &nbsp;&nbsp;
+      <a class="news-source" href="https://about.fb.com/news/2026/03/creator-fast-track-grow-your-audience-earn-money-on-facebook/" target="_blank">來源：Meta 官方 — Creator Fast Track →</a>
+    </div>
+
+    <div class="news-item">
+      <div class="news-platform">Substack</div>
+      <div class="news-title">Substack 全面直播化：無需 RTMP、錄製工作室、自動剪輯一次到位</div>
+      <div class="news-body">
+        Substack 在 3 月推出完整直播功能：桌機端支援免 RTMP 直播（最多 2 位來賓）、同時整合 Streamyard/OBS 的 RTMP 接入，並推出 Substack Recording Studio，內建自動剪輯、自動縮圖、自訂浮水印、分割畫面與螢幕分享。這代表 Substack 正式從「訂閱電子報平台」轉型為「多格式內容 + 訂閱收入」全方位工具。Patreon 正在積極挖走 Substack 頭部作者（如 Anne Helen Petersen），Substack 則以直播功能擴充黏著度來反制。兩平台的競爭正從定位差異演變為功能正面對決。
+      </div>
+      <a class="news-source" href="https://mikejsearles.substack.com/p/substack-video-timeline-data-distribution-map" target="_blank">來源：Mike Searles (Substack) — Substack and Video: Complete Timeline →</a>
+    </div>
+
+    <div class="news-item">
+      <div class="news-platform">17LIVE</div>
+      <div class="news-title">17LIVE x STAR RISE AUDITION 啟動：直播主直通音樂出道機會</div>
+      <div class="news-body">
+        3 月 29 日，17LIVE 與 STAR RISE AUDITION 合作的評審賽事正式開跑，持續至 4 月 12 日。17LIVE 直播主可透過本平台展演音樂才能，最終大獎得主將有機會從 PONY CANYON（知名日本音樂廠牌）出道。這是 17LIVE 「直播 → 職涯發展」的典型策略操作，透過提供真實的職涯跳板（而非單純的打賞收入），強化創作者在平台上的長期留存動機。17LIVE 目前定位為日本最大直播 app，台灣東南亞也有布局。
+      </div>
+      <a class="news-source" href="https://alive-project.com/en/streamer-magazine/article/14676/" target="_blank">來源：Streamer Magazine — 17LIVE x STAR RISE AUDITION →</a>
+    </div>
+
+    <div class="news-item">
+      <div class="news-platform">BigoLive</div>
+      <div class="news-title">BigoLive 成立 10 週年：Carnival Eve 活動持續中</div>
+      <div class="news-body">
+        BigoLive 正值成立 10 週年，推出 "Carnival Eve" 慶典活動（截至 4 月 9 日），以及 "Empowering Women Worldwide – Shine Like a Star!" 女性創作者主題活動。雖然本週無重大功能更新，但 10 週年里程碑本身具有市場信號意義——BigoLive 是全球化直播平台中少數能存活超過十年的玩家，其在東南亞和中東的市佔仍不可忽視。
+      </div>
+      <a class="news-source" href="https://play.google.com/store/apps/details?id=sg.bigo.live&hl=en_US" target="_blank">來源：Google Play — Bigo Live →</a>
+    </div>
+  </div>
+
+  <!-- Creator Economy 市場 -->
+  <div class="section">
+    <div class="section-title">Creator Economy 市場</div>
+
+    <div class="news-item">
+      <div class="news-platform">市場規模</div>
+      <div class="news-title">2026 年全球 Creator Economy 估值突破 2,300 億美元，品牌預算持續湧入</div>
+      <div class="news-body">
+        根據最新數據，2026 年全球 Creator Economy 估值超過 2,300 億美元，美國市場廣告支出預估將達 371 億美元、明年再升至 439 億美元。92% 的品牌行銷人員計劃同時與 macro（10 萬–50 萬粉）及 micro（5,000–10 萬粉）創作者合作，顯示中腰部創作者的議價能力持續上升。79% 的行銷人員表示已增加生成式 AI 創作者內容的預算，且明年還要再加碼。
+      </div>
+      <a class="news-source" href="https://finance.yahoo.com/news/creator-economy-statistics-2026-120-150000105.html" target="_blank">來源：Yahoo Finance — Creator Economy Statistics 2026: 120+ Data Points →</a>
+    </div>
+
+    <div class="news-item">
+      <div class="news-platform">新創融資</div>
+      <div class="news-title">Devotion 獲 $400 萬種子輪，前 TikTok 高管創立新型 Influencer 行銷平台</div>
+      <div class="news-body">
+        3 月初，前 Parade 創辦人 Cami Tellez 與前 TikTok 高管 Jon Kroopf 聯手創立 Devotion，定位為大型品牌的 influencer 計畫管理工具，獲 Basecase 與 Will Ventures 領投 400 萬美元種子輪。這是創作者生態系「工具層」（creator tooling）繼續吸引資本的信號，也顯示 influencer 行銷的運營複雜度已到需要專屬 SaaS 來管理的規模。
+      </div>
+      <a class="news-source" href="https://techcrunch.com/2026/03/02/parades-cami-tellez-announces-new-creator-economy-marketing-platform-4m-in-funding/" target="_blank">來源：TechCrunch — Parade's Cami Tellez announces new creator economy marketing platform →</a>
+    </div>
+  </div>
+
+  <!-- 對 SHōW YŌU 的建議 -->
+  <div class="section">
+    <div class="section-title">對 SHōW YŌU 平台的建議</div>
+
+    <div class="recommendation-item">
+      <div class="rec-title">1. 以「AI 職涯跳板」強化創作者留存，對標 17LIVE 邏輯</div>
+      <div class="rec-body">
+        17LIVE 用「音樂出道機會」來留住創作者，本質是提供打賞收入以外的職涯價值。SHōW YŌU 即將上線的 AI 輔助工具（粉絲陪伴、數據分析）可以用同樣邏輯包裝：不只是工具，而是「讓你更快成長為頭部創作者的加速器」。建議在 4 月上線時，強調 AI 工具如何幫創作者帶更多粉絲、提升 ARPPU，直接對應創作者的核心利益。
+      </div>
+    </div>
+
+    <div class="recommendation-item">
+      <div class="rec-title">2. Meta Creator Fast Track 是競爭威脅，需關注台灣頭部創作者是否有被挖走的風險</div>
+      <div class="rec-body">
+        Meta 正在砸現金直接招募其他平台的百萬粉創作者。雖然 Facebook 在台灣的直播生態不如 TikTok，但 Instagram 的觸及仍強。建議盤點目前平台上有多少創作者同時在 IG 有大量粉絲，這些人是最高風險族群。短期內可以強化「SHōW YŌU 分潤比 Meta 高」的溝通，以及 AI 工具即將上線的期望值管理。
+      </div>
+    </div>
+
+    <div class="recommendation-item">
+      <div class="rec-title">3. Claude Mythos 與 AI 能力躍升值得密切追蹤，對 AI 創作者功能的規劃有直接影響</div>
+      <div class="rec-body">
+        如果 Mythos 的能力確如洩漏所描述，未來 6-12 個月內 AI 輔助對話、粉絲陪伴的品質將大幅提升。4 月上線的 AI 功能目前是以現有模型為基礎，建議在技術架構上保持模型可替換性（不要 hardcode 某個模型版本），這樣未來升級 Mythos 時不需重建功能。
+      </div>
+    </div>
+  </div>
+
+  <!-- 下週持續追蹤 -->
+  <div class="section">
+    <div class="section-title">下週持續追蹤</div>
+    <ul class="watchlist">
+      <li>Anthropic 是否正式宣布 Claude Mythos 的發布計畫，以及安全性評估結果如何影響時程</li>
+      <li>Meta Creator Fast Track 在台灣、東南亞的實際接受狀況，以及是否帶動平台間的創作者流動</li>
+      <li>Substack 直播功能的使用數據，以及 Patreon vs Substack 的創作者遷移潮是否繼續擴大</li>
+      <li>17LIVE STAR RISE AUDITION 賽事進展，以及同類「職涯發展」型活動在東南亞市場的牽引力</li>
+      <li>TikTok Scaled Rewards 正式上線時程與分潤細節（目前尚未確認正式發布日期）</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  SHōW YŌU 市場週報 · 第二期 · 2026-03-30<br>
+  由 Claude Code 自動產出，資料來源見各則新聞連結
+</footer>
+
+</body>
+</html>
