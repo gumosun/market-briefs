@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>市場週報 第三期 — 2026-04-07</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans TC', 'Noto Sans', sans-serif; background: #F7F7F7; color: #333333; line-height: 1.8; }
+
+  /* Header */
+  .page-header { background: #1A1A1A; color: #fff; padding: 48px 40px 40px; }
+  .header-label { font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #F47920; margin-bottom: 14px; }
+  .header-title { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+  .header-meta { font-size: 14px; color: #999; margin-top: 6px; }
+  .header-meta span { color: #F47920; font-weight: 600; }
+
+  /* Container */
+  .container { max-width: 860px; margin: 0 auto; padding: 44px 24px 60px; }
+
+  /* Section */
+  .section { margin-bottom: 44px; }
+  .section-title {
+    font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    color: #F47920; margin-bottom: 20px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .section-title::after { content: ''; flex: 1; height: 1px; background: #F47920; opacity: 0.2; }
+
+  /* Highlight box */
+  .highlight-list { display: flex; flex-direction: column; gap: 12px; }
+  .highlight-item {
+    background: #fff;
+    border-left: 5px solid #F47920;
+    border-radius: 0 10px 10px 0;
+    padding: 18px 22px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  .highlight-item .label {
+    font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+    color: #F47920; margin-bottom: 6px;
+  }
+  .highlight-item .text { font-size: 17px; font-weight: 600; color: #1A1A1A; line-height: 1.6; }
+  .highlight-item .sub { font-size: 14px; color: #666; margin-top: 4px; }
+
+  /* News card */
+  .news-card {
+    background: #fff;
+    border-radius: 12px;
+    border-top: 4px solid #F47920;
+    padding: 22px 24px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-bottom: 16px;
+  }
+  .news-card h3 { font-size: 18px; font-weight: 700; color: #1A1A1A; margin-bottom: 12px; line-height: 1.5; }
+  .news-card p { font-size: 17px; color: #444; line-height: 1.85; margin-bottom: 10px; }
+  .news-card p:last-of-type { margin-bottom: 8px; }
+  a.news-source {
+    font-size: 13px; color: #aaa; text-decoration: none;
+    border-bottom: 1px dashed #ddd; transition: color 0.2s;
+    display: inline-block; margin-top: 4px;
+  }
+  a.news-source:hover { color: #F47920; }
+
+  /* Platform sub-group */
+  .platform-label {
+    font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+    color: #fff; background: #1A1A1A; display: inline-block;
+    padding: 4px 12px; border-radius: 4px; margin-bottom: 10px;
+  }
+
+  /* Recommendation card */
+  .rec-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 22px 24px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-bottom: 16px;
+    display: flex; gap: 18px; align-items: flex-start;
+  }
+  .rec-num {
+    background: #F47920; color: #fff;
+    font-size: 18px; font-weight: 900;
+    width: 38px; height: 38px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .rec-body { flex: 1; }
+  .rec-body h3 { font-size: 18px; font-weight: 700; color: #1A1A1A; margin-bottom: 8px; }
+  .rec-body p { font-size: 17px; color: #444; line-height: 1.85; }
+
+  /* Watch list */
+  .watch-list { display: flex; flex-direction: column; gap: 10px; }
+  .watch-item {
+    background: #fff;
+    border-radius: 10px;
+    padding: 16px 20px;
+    font-size: 17px; color: #333;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    display: flex; align-items: flex-start; gap: 12px;
+  }
+  .watch-item::before { content: '→'; color: #F47920; font-weight: 700; flex-shrink: 0; }
+
+  /* Badge */
+  .badge { display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 9px; border-radius: 4px; margin-left: 8px; vertical-align: middle; }
+  .badge-orange { background: #FFF3E0; color: #E65100; }
+  .badge-green { background: #E6F9F0; color: #1a7a4a; }
+  .badge-gray { background: #F0F0F0; color: #666; }
+
+  /* Footer */
+  .footer { text-align: center; padding: 36px 24px; font-size: 12px; color: #bbb; }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div class="header-label">SHōW YŌU Product Team</div>
+  <div class="header-title">AI 市場週報 — 第三期</div>
+  <div class="header-meta">
+    涵蓋期間：<span>2026 年 3 月 31 日 — 4 月 7 日</span>　｜　發布日期：2026-04-07
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- Section 1: 本週重點摘要 -->
+  <div class="section">
+    <div class="section-title">本週重點摘要</div>
+    <div class="highlight-list">
+      <div class="highlight-item">
+        <div class="label">AI 工具</div>
+        <div class="text">Anthropic 終止 Claude 訂閱方案對第三方工具（OpenClaw）的支援，強迫改用 pay-as-you-go</div>
+        <div class="sub">影響所有以 Claude Max/Pro 驅動的 AI 自動化工具用戶，開發圈反應激烈</div>
+      </div>
+      <div class="highlight-item">
+        <div class="label">競品</div>
+        <div class="text">TikTok x Cameo 合作：美國創作者可在 TikTok 內直接接受粉絲「個人化影片」訂單</div>
+        <div class="sub">平台主動為創作者開闢打賞外的新收入層，值得參考的 monetization 路徑</div>
+      </div>
+      <div class="highlight-item">
+        <div class="label">競品</div>
+        <div class="text">Substack 突破 500 萬付費訂閱，推出 Substack TV 搶進 Apple TV / Google TV</div>
+        <div class="sub">從 newsletter 全面進化為影音訂閱平台，直接搶訂閱制創作者</div>
+      </div>
+      <div class="highlight-item">
+        <div class="label">Creator Economy</div>
+        <div class="text">TikTok Shop 東南亞 GMV 翻倍至 $45.6B，直播電商持續爆炸</div>
+        <div class="sub">印尼躍升全球第二大 TikTok Shop 市場，對 SHōW YŌU 東南亞佈局有直接參考意義</div>
+      </div>
+      <div class="highlight-item">
+        <div class="label">市場趨勢</div>
+        <div class="text">Direct-to-fan 模式（訂閱、付費社群、直播打賞）佔創作者經濟 $290B 整體的過半收入</div>
+        <div class="sub">Patreon 數據：創作者每位粉絲收益是 TikTok 的 40 倍，高分成平台優勢更顯著</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 2: AI 工具與技術落地 -->
+  <div class="section">
+    <div class="section-title">AI 工具與技術落地</div>
+
+    <div class="news-card">
+      <h3>Anthropic 封鎖 Claude 訂閱方案對 OpenClaw 及第三方工具的使用 <span class="badge badge-orange">重大政策變動</span></h3>
+      <p>2026 年 4 月 4 日中午（PT），Anthropic 宣布 Claude Pro 和 Max 訂閱方案的額度，將不再涵蓋 OpenClaw 及其他第三方 AI 代理工具的使用。所有透過外部 harness 調用 Claude 的用戶，必須改用「按量計費（pay-as-you-go）」或直接走 API。</p>
+      <p>Anthropic 給出的理由是需求量遠超預期，第三方工具的使用成本並未被納入原始訂閱方案設計中。為協助用戶轉移，提供一次性等值月費信用點數（有效期至 4/17）及最高 30% 的預購折扣。此政策未來將推廣至所有第三方 harness。</p>
+      <p>這對整個 AI 開發者生態系影響顯著。原本許多團隊用 Claude Max（$100/月）跑自動化代理工作流程的成本模型將大幅改變，可能推動部分用戶轉向 OpenAI API 或開源模型。</p>
+      <a class="news-source" href="https://techcrunch.com/2026/04/04/anthropic-says-claude-code-subscribers-will-need-to-pay-extra-for-openclaw-support/" target="_blank">來源：TechCrunch — Anthropic says Claude Code subscribers will need to pay extra for OpenClaw usage →</a>
+    </div>
+
+    <div class="news-card">
+      <h3>Claude Code 持續更新：/powerup 教學、Bedrock 設定精靈、成本洞察強化</h3>
+      <p>本週 Claude Code 發布數個版本更新，新增互動式 /powerup 課程讓用戶學習進階技巧、加入 AWS Bedrock 設定精靈簡化企業部署，並提供更豐富的 token 成本視覺化分析。另外也改善了 resume 恢復速度、session 穩定性、大型檔案寫入效率，以及多項 CLI 和 PowerShell 權限問題的修正。</p>
+      <p>這批更新方向明確指向企業和工程團隊的需求——更低的 onboarding 門檻（Bedrock wizard）加上更清晰的成本控制，是 Anthropic 在封鎖第三方工具後，試圖將流量引導至官方 Claude Code 生態的配套動作。</p>
+      <a class="news-source" href="https://releasebot.io/updates/anthropic/claude-code" target="_blank">來源：Releasebot — Claude Code by Anthropic Release Notes April 2026 →</a>
+    </div>
+
+    <div class="news-card">
+      <h3>Google Veo 3.1 Lite 上線：影片生成成本降至 Fast 版本的 50% 以下</h3>
+      <p>Google 在 4 月 7 日發布 Veo 3.1 Lite，這款影片生成模型的定價不到 Veo 3.1 Fast 的一半，且在速度上沒有明顯犧牲。同日 Google 也進一步下調 Veo 3.1 Fast 的定價，讓影片生成的成本門檻大幅降低。</p>
+      <p>AI 影片生成已從「昂貴的實驗功能」快速走向「可以嵌入產品流程的基礎能力」。對創作者平台而言，這意味著 AI 輔助內容製作（短影音自動生成、創作者 AI 分身影片）的技術成本在持續下降，是值得持續追蹤的基礎設施變化。</p>
+      <a class="news-source" href="https://renovateqr.com/blog/ai-models-april-2026" target="_blank">來源：renovateqr.com — AI Models in April 2026: Every Major Release, Leak, and What Comes Next →</a>
+    </div>
+
+    <div class="news-card">
+      <h3>GPT-5.4 新功能：File Library、App 整合寫入能力、購物體驗升級</h3>
+      <p>ChatGPT 本週新增 File Library 功能，自動儲存用戶上傳或建立的檔案，並可在後續對話中直接參照調用。同時更新了 Box、Notion、Linear、Dropbox 的 app 整合，首次開放寫入操作（而非只讀）。GPT-5.4 mini 也全面鋪開，為高量工作負載提供更快、更便宜的 5.4 級別能力。</p>
+      <p>File Library 是 ChatGPT 往「AI 工作空間」方向前進的關鍵一步，讓跨對話的上下文連續性大幅提升。對 AI 工具競爭格局的意義在於：ChatGPT 正在打造一個比 Claude.ai 更完整的「企業日常工作流程」，而不只是問答工具。</p>
+      <a class="news-source" href="https://imidef.com/en/2026-04-05-chatgpt-new-features-april-2026" target="_blank">來源：imidef.com — ChatGPT New Features in April 2026: GPT-5.4 Thinking, File Library, and More →</a>
+    </div>
+  </div>
+
+  <!-- Section 3: 競品動態 -->
+  <div class="section">
+    <div class="section-title">競品動態</div>
+
+    <div class="news-card">
+      <div class="platform-label">TikTok</div>
+      <h3>TikTok x Cameo 合作上線：美國創作者可在 app 內接受個人化影片訂單</h3>
+      <p>TikTok 與 Cameo 於 3 月 31 日 / 4 月 1 日正式宣布深度合作。美國創作者現在可以直接在 TikTok 內開通 Cameo 帳號，並在內容頁面設置客製化 CTA 按鈕，讓粉絲不用離開 app 就能下訂「個人化影片」訊息。粉絲也可以在 TikTok 搜尋「Cameo」找到支援此功能的創作者列表。</p>
+      <p>這是 TikTok 在打賞和 LIVE 訂閱之外，為創作者新增的第三條 in-app 變現路徑。Cameo 模式的核心是「粉絲出錢購買創作者的個人化注意力」，單價通常遠高於一般打賞。TikTok 2025 年已是 Cameo 增長最快的人才來源平台，此次直接整合進 app 將大幅降低轉換摩擦。</p>
+      <a class="news-source" href="https://techcrunch.com/2026/04/01/cameo-partners-with-tiktok-to-boost-popularity/" target="_blank">來源：TechCrunch — Cameo partners with TikTok to boost popularity →</a>
+    </div>
+
+    <div class="news-card">
+      <div class="platform-label">TikTok</div>
+      <h3>TikTok 東南亞突破 4.6 億用戶，TikTok Shop 東南亞 GMV 翻倍至 $45.6B</h3>
+      <p>TikTok 官方公布東南亞用戶數突破 4.6 億，同時 TikTok Shop 東南亞 2025 年 GMV 年增翻倍達 $45.6 億美元，印尼以 $131 億躍升為全球第二大市場，僅次於美國。超過 80% 的受訪 TikTok 創作者表示曾透過 TikTok LIVE 或品牌業配提升收入。TikTok 亦預估 APAC 創作者對商業貢獻額將在 2030 年前達到 $1.2 兆。</p>
+      <p>對於主攻台灣與東南亞的 SHōW YŌU 來說，TikTok 在這個市場的強勁滲透是無法忽視的競爭壓力。TikTok Shop 的直播電商格局正在把「直播」從娛樂互動轉向帶貨變現，若我們的創作者缺乏電商變現路徑，可能讓部分追求多元收入的創作者被分流。</p>
+      <a class="news-source" href="https://newsroom.tiktok.com/tiktok-surpasses-460-million-users-in-southeast-asia-inks-partnership-with-vietnams-ministry-of-culture-sports-and-tourism?lang=en-SG" target="_blank">來源：TikTok Newsroom — TikTok Surpasses 460 Million Users in Southeast Asia →</a>
+    </div>
+
+    <div class="news-card">
+      <div class="platform-label">Substack</div>
+      <h3>Substack 付費訂閱突破 500 萬，Substack TV 登陸 Apple TV / Google TV</h3>
+      <p>Substack 宣布突破 500 萬付費訂閱里程碑，月活用戶超過 2,000 萬，成長動能主要來自影音內容和政治評論類創作者。2026 年 1 月 Substack 推出 Substack TV，一款專為 Apple TV 和 Google TV 打造的獨立串流 app，支援影片和 LIVE 串流。目前平台前 250 名創作者中，82% 已定期產出音訊或影片內容。</p>
+      <p>Substack 正從文字訂閱快速進化為全媒體付費創作者平台，且直接進入客廳大螢幕場景。這與 SHōW YŌU 的訂閱制計畫高度重疊——Substack 的核心競爭力也是「直接面對粉絲的高分成變現」，未來在爭取圖文和 podcast 類型創作者上是潛在競爭對手。</p>
+      <a class="news-source" href="https://www.hollywoodreporter.com/business/business-news/substack-number-subscribers-video-trump-1236158048/" target="_blank">來源：Hollywood Reporter — Substack Surges Past 5M Paid Subscriptions, Thanks to Video and Trump →</a>
+    </div>
+
+    <div class="news-card">
+      <div class="platform-label">Patreon</div>
+      <h3>Patreon 強制所有舊版帳戶在 2026 年 11 月前完成遷移，每粉絲收益達 TikTok 40 倍</h3>
+      <p>Patreon 要求所有仍使用舊版計費方式的創作者，在 2026 年 11 月 1 日前強制切換至訂閱計費模式。目前平台對 2025 年 8 月後加入的新創作者統一收取 10%（加上 Stripe 手續費，實際為 13–16%）。平台統計顯示超過 25 萬名創作者活躍使用，創作者年總收益超過 $20 億。研究顯示 Patreon 創作者每位粉絲的收益是 TikTok 的 40 倍。</p>
+      <p>Patreon 的核心數據再次驗證「深度粉絲關係 > 廣覆蓋曝光」的商業邏輯。「每粉絲 40 倍收益」是一個強有力的對比數據，適合用於對創作者的招募溝通，尤其在強調 SHōW YŌU 高分成的差異化定位時。</p>
+      <a class="news-source" href="https://fueler.io/blog/patreon-usage-revenue-valuation-growth-statistics" target="_blank">來源：fueler.io — Patreon in 2026: Usage, Revenue, Valuation & Growth Statistics →</a>
+    </div>
+
+    <div class="news-card">
+      <div class="platform-label">BigoLive</div>
+      <h3>BigoLive v6.45.4 上線（4/2），10 週年活動進行中，無重大功能公告</h3>
+      <p>BigoLive 於 4 月 2 日發布 v6.45.4 版本更新，同期舉辦「Empowering Women Worldwide」主題活動（至 4/15）及 Bigo 10 週年慶典。本週未見重大功能或商業政策相關公告。</p>
+      <a class="news-source" href="https://news.bittopup.com/news/bigo-live-diamonds-april-2026-noble-reset-stacking-guide" target="_blank">來源：BitTopup News — Bigo Live Diamonds April 2026 →</a>
+    </div>
+
+    <p style="font-size:15px; color:#888; margin-top:8px; padding: 0 4px;">17LIVE、LangLive、Passes 本週無可確認的公開動態，不納入報告。</p>
+  </div>
+
+  <!-- Section 4: Creator Economy 市場 -->
+  <div class="section">
+    <div class="section-title">Creator Economy 市場</div>
+
+    <div class="news-card">
+      <h3>全球直播市場規模達 $620 億，Kick 爆增 131%、TikTok Live 快速擴張</h3>
+      <p>2026 年全球直播市場規模預計達到 $620 億，2025 年全年共有 364 億小時的直播被收看。平台份額上，YouTube Live 以 47% 的觀看時數主導市場，Twitch 則首次出現持續下滑的訊號。值得注意的是，Kick 以 131% 的高速成長成為最快崛起的直播平台；TikTok Live 也在繼續快速擴張其覆蓋範圍和創作者工具。</p>
+      <p>市場整體規模仍在高速增長，但平台間的競爭格局正在重組。Twitch 的衰退給專注直播的小型平台帶來機會，而 Kick 以「更高分成」為核心賣點的成功——與 SHōW YŌU 的策略高度相似——驗證了這個訴求對直播創作者確實有效。</p>
+      <a class="news-source" href="https://autofaceless.ai/blog/live-streaming-statistics-2026" target="_blank">來源：AutoFaceless — Live Streaming Statistics 2026: $62 Billion Market →</a>
+    </div>
+
+    <div class="news-card">
+      <h3>Direct-to-fan 收入已佔全球創作者經濟 $2,900 億的過半，訂閱 / 直播 / 付費社群主導</h3>
+      <p>2026 年全球創作者經濟規模估計超過 $2,900 億，其中超過一半的收入來自直接面對粉絲的變現模式——訂閱制、付費社群、直播打賞、數位商品銷售——而非廣告分潤。美國創作者經濟單市場預計突破 $400 億。Patreon 的數據顯示，在直接面對粉絲的平台上，每位粉絲的收益是社群媒體廣告模式的 40 倍，而超過一半的受訪創作者表示正積極發展直接付費渠道。</p>
+      <p>整個行業的結構性轉向確認了 SHōW YŌU 的方向正確。隨著打賞（虛擬禮物）和即將推出的訂閱制，平台本身就是「direct-to-fan 基礎設施」的提供者。這個趨勢的持續加速，意味著能給創作者提供更完整 direct-to-fan 工具（打賞 + 訂閱 + 未來的個人化內容販售）的平台，將在創作者招募競爭中佔據有利位置。</p>
+      <a class="news-source" href="https://www.contentgrip.com/direct-to-fan-creator-economy-shift/" target="_blank">來源：ContentGrip — Patreon report finds creators ditching the algorithm →</a>
+    </div>
+  </div>
+
+  <!-- Section 5: 對 SHōW YŌU 的建議 -->
+  <div class="section">
+    <div class="section-title">對 SHōW YŌU 平台的建議</div>
+
+    <div class="rec-card">
+      <div class="rec-num">1</div>
+      <div class="rec-body">
+        <h3>參考 TikTok x Cameo 模式，評估「個人化影片訂單」作為創作者新收入層</h3>
+        <p>TikTok 將 Cameo 整合為 in-app 功能，讓粉絲可直接向創作者下訂「客製化影片」，本質上是一種「按需打賞升級版」——粉絲不只送禮，而是購買創作者的個人化注意力。這種模式單價高、粉絲黏著度強，且不需要創作者主動直播。建議評估在 Q3 路線圖中加入「創作者個人化影片請求」功能，可先從測試少數頭部創作者開始，驗證台灣用戶的付費意願。此功能若成立，也能強化「AI 虛擬分身」的應用場景（以 AI 生成個人化回應替代創作者手動錄製）。</p>
+      </div>
+    </div>
+
+    <div class="rec-card">
+      <div class="rec-num">2</div>
+      <div class="rec-body">
+        <h3>用「每粉絲 40 倍收益」強化對創作者的招募溝通，加速訂閱制預期管理</h3>
+        <p>Patreon 的數據提供了一個有力的對比框架：直接面對粉絲的平台上，每位粉絲的收益是演算法廣告模式的 40 倍。SHōW YŌU 的高分成打賞 + 即將推出的訂閱制，本質上就是這個邏輯的實踐。建議在對外的創作者招募素材和 BD 溝通中，主動使用「per-fan value」框架作為差異化訴求，而非只強調分成比例數字本身。同時，訂閱制的上線時程（6 月前）可以開始在創作者社群中提前鋪陳預期，吸引已在其他平台做訂閱的創作者提前移轉。</p>
+      </div>
+    </div>
+
+    <div class="rec-card">
+      <div class="rec-num">3</div>
+      <div class="rec-body">
+        <h3>盤點 AI 工具鏈的成本結構，評估 OpenClaw / Claude API 政策變動的影響</h3>
+        <p>Anthropic 封鎖 Claude 訂閱方案對第三方工具的使用，若工程或 PM 團隊目前有任何流程仰賴 OpenClaw 或類似工具跑 Claude，需要在 4/17 之前確認是否轉換至 API 付費模式，並重新估算月度 AI 工具成本。此外，AI 工具成本結構的快速變動（Claude、Veo 等定價調整）也提醒我們：當 Minikorn / EchoFans 等 AI 功能進入生產環境後，需要做清晰的 per-user AI 成本建模，確保每位創作者的 AI 功能使用成本有對應的變現覆蓋。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 6: 下週持續追蹤 -->
+  <div class="section">
+    <div class="section-title">下週持續追蹤</div>
+    <div class="watch-list">
+      <div class="watch-item">Anthropic OpenClaw 後續：其他第三方工具（Cursor、Windsurf 等）是否也被納入限制，以及開發者社群的遷移動向</div>
+      <div class="watch-item">TikTok Live 東南亞市場是否有新的創作者分潤計畫公告，直播電商和打賞的整合動態</div>
+      <div class="watch-item">Substack TV 的創作者招募策略，是否開始主動接觸直播主或吸引有影片產出能力的創作者</div>
+      <div class="watch-item">Kick 成長 131% 背後的創作者政策細節——其分成條件是否構成對 SHōW YŌU 的直接競爭</div>
+      <div class="watch-item">Google Veo 3.1 Lite 開放後，是否有 AI 虛擬分身或個人化影片生成的新產品案例值得參考</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  SHōW YŌU Product Team — 市場週報第三期　|　2026-04-07
+</div>
+
+</body>
+</html>
