@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>市場週報 第四期 — 2026-04-14</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans TC', 'Noto Sans', sans-serif; background: #F7F7F7; color: #333333; line-height: 1.8; }
+
+  /* Header */
+  .page-header { background: #1A1A1A; color: #fff; padding: 48px 40px 40px; }
+  .header-label { font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #F47920; margin-bottom: 14px; }
+  .header-title { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+  .header-meta { font-size: 14px; color: #999; margin-top: 6px; }
+  .header-meta span { color: #F47920; font-weight: 600; }
+
+  /* Container */
+  .container { max-width: 860px; margin: 0 auto; padding: 44px 24px 60px; }
+
+  /* Section */
+  .section { margin-bottom: 44px; }
+  .section-title {
+    font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    color: #F47920; margin-bottom: 20px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .section-title::after { content: ''; flex: 1; height: 1px; background: #F47920; opacity: 0.2; }
+
+  /* Highlight box */
+  .highlight-list { display: flex; flex-direction: column; gap: 12px; }
+  .highlight-item {
+    background: #fff;
+    border-left: 5px solid #F47920;
+    border-radius: 0 10px 10px 0;
+    padding: 18px 22px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  .highlight-item .label {
+    font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+    color: #F47920; margin-bottom: 6px;
+  }
+  .highlight-item .text { font-size: 17px; font-weight: 600; color: #1A1A1A; line-height: 1.6; }
+  .highlight-item .sub { font-size: 14px; color: #666; margin-top: 4px; }
+
+  /* News card */
+  .news-card {
+    background: #fff;
+    border-radius: 12px;
+    border-top: 4px solid #F47920;
+    padding: 22px 24px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-bottom: 16px;
+  }
+  .news-card h3 { font-size: 18px; font-weight: 700; color: #1A1A1A; margin-bottom: 12px; line-height: 1.5; }
+  .news-card p { font-size: 17px; color: #444; line-height: 1.85; margin-bottom: 10px; }
+  .news-card p:last-of-type { margin-bottom: 8px; }
+  a.news-source {
+    font-size: 13px; color: #aaa; text-decoration: none;
+    border-bottom: 1px dashed #ddd; transition: color 0.2s;
+    display: inline-block; margin-top: 4px;
+  }
+  a.news-source:hover { color: #F47920; }
+
+  /* Platform sub-group */
+  .platform-label {
+    font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+    color: #fff; background: #1A1A1A; display: inline-block;
+    padding: 4px 12px; border-radius: 4px; margin-bottom: 10px;
+  }
+
+  /* Recommendation card */
+  .rec-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 22px 24px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-bottom: 16px;
+    display: flex; gap: 18px; align-items: flex-start;
+  }
+  .rec-num {
+    background: #F47920; color: #fff;
+    font-size: 18px; font-weight: 900;
+    width: 38px; height: 38px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .rec-body { flex: 1; }
+  .rec-body h3 { font-size: 18px; font-weight: 700; color: #1A1A1A; margin-bottom: 8px; }
+  .rec-body p { font-size: 17px; color: #444; line-height: 1.85; }
+
+  /* Watch list */
+  .watch-list { display: flex; flex-direction: column; gap: 10px; }
+  .watch-item {
+    background: #fff;
+    border-radius: 10px;
+    padding: 16px 20px;
+    font-size: 17px; color: #333;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    display: flex; align-items: flex-start; gap: 12px;
+  }
+  .watch-item::before { content: '→'; color: #F47920; font-weight: 700; flex-shrink: 0; }
+
+  /* Badge */
+  .badge { display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 9px; border-radius: 4px; margin-left: 8px; vertical-align: middle; }
+  .badge-orange { background: #FFF3E0; color: #E65100; }
+  .badge-green { background: #E6F9F0; color: #1a7a4a; }
+  .badge-gray { background: #F0F0F0; color: #666; }
+
+  /* Footer */
+  .footer { text-align: center; padding: 36px 24px; font-size: 12px; color: #bbb; }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div class="header-label">SHōW YŌU Product Team</div>
+  <div class="header-title">AI 市場週報 — 第四期</div>
+  <div class="header-meta">
+    涵蓋期間：<span>2026 年 4 月 7 日 — 4 月 14 日</span>　｜　發布日期：2026-04-14
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- Section 1: 本週重點摘要 -->
+  <div class="section">
+    <div class="section-title">本週重點摘要</div>
+    <div class="highlight-list">
+      <div class="highlight-item">
+        <div class="label">AI 大事</div>
+        <div class="text">Meta 首發閉源模型 Muse Spark（4/8）：掉頭放棄開源路線，直接整合進 Instagram、WhatsApp、FB</div>
+        <div class="sub">與 Llama 策略 180 度轉向，代表 Meta 將 AI 變現從「工具開放」切換為「社交平台原生體驗」</div>
+      </div>
+      <div class="highlight-item">
+        <div class="label">AI 工具</div>
+        <div class="text">Anthropic 完成 Microsoft Office 全面整合：Word add-in 上線（4/13），Claude 現在可原生操作 Word、Excel、PowerPoint</div>
+        <div class="sub">企業端 AI 工作流已完全成熟，AI 工具從「對話窗口」變成「文件生產引擎」</div>
+      </div>
+      <div class="highlight-item">
+        <div class="label">AI 工具</div>
+        <div class="text">GPT-5.4 Thinking 上線：推理 + 程式 + 代理工作流三合一，OpenAI Pro 方案同步調漲至 $100/月</div>
+        <div class="sub">AI 旗艦模型定價正式進入百元美金水位，頂層 AI 工具的月訂閱成本快速拉高</div>
+      </div>
+      <div class="highlight-item">
+        <div class="label">競品</div>
+        <div class="text">Passes 平台市場份額持續擴張：7 種變現工具、10% 抽成、Anti-screenshot 技術，是本週創作者平台競爭最值得關注的對手</div>
+        <div class="sub">Grammy 藝人加入的聲量效應持續發酵，Passes 正在成為高單價創作者的首選「all-in-one」平台</div>
+      </div>
+      <div class="highlight-item">
+        <div class="label">Creator Economy</div>
+        <div class="text">Picsart 開放全創作者參與變現計畫（4/6）：無粉絲門檻，創作者以內容換收入，直接打廣告主預算</div>
+        <div class="sub">創作者變現的門檻持續降低，「人人都能靠創作收費」的市場標準正在重塑</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 2: AI 技術與工具落地 -->
+  <div class="section">
+    <div class="section-title">AI 技術與工具落地</div>
+
+    <div class="news-card">
+      <h3>Meta 首發閉源大模型 Muse Spark：告別開源 Llama，直指社交平台 AI 原生體驗 <span class="badge badge-orange">策略重大轉向</span></h3>
+      <p>4 月 8 日，Meta 正式發布 Muse Spark，這是 Meta Superintelligence Labs 成立後的第一款自研閉源模型，也宣告 Meta AI 策略從「開源 Llama 生態」轉向「閉源旗艦原生整合」。Muse Spark 原生多模態，支援文字、圖片、語音輸入，具備工具調用能力與視覺鏈式推理，上下文窗口達 262k token。</p>
+      <p>在性能排名上，Muse Spark 在 Artificial Analysis 智能指數得分 52，緊追 Gemini 3.1 Pro Preview（57）、GPT-5.4（57）與 Claude Opus 4.6（53），相較 Llama 4 Maverick 的 18 分大幅躍進。目前 Muse Spark 已上線 meta.ai 和 Meta AI app，接下來幾週將陸續鋪到 WhatsApp、Instagram、Facebook、Messenger 和 AI 眼鏡。</p>
+      <p>對平台生態的意義在於：Meta 旗下擁有 Instagram、WhatsApp 等數十億用戶基礎，一旦 Muse Spark 深度嵌入社交互動場景（AI 直播陪伴、粉絲回覆自動化、個人化推薦），對創作者社群平台的競爭壓力將大幅升高。</p>
+      <a class="news-source" href="https://techcrunch.com/2026/04/08/meta-debuts-the-muse-spark-model-in-a-ground-up-overhaul-of-its-ai/" target="_blank">來源：TechCrunch — Meta debuts the Muse Spark model in a ground-up overhaul of its AI →</a>
+    </div>
+
+    <div class="news-card">
+      <h3>Anthropic Claude 完成 Microsoft Office 全套整合：Word add-in 4/13 上線 <span class="badge badge-green">本週新發布</span></h3>
+      <p>4 月 13 日，Anthropic 推出 Claude for Word add-in，完成了 Claude 在 Microsoft Office 完整套件的覆蓋（Word、Excel、PowerPoint）。此前 Claude for Excel 和 PowerPoint 已先後上線，Word 是最後一塊拼圖。用戶可在 Word 文件內直接調用 Claude 進行草稿撰寫、段落改寫、文件摘要，不需切換視窗。</p>
+      <p>同時，Claude Cowork 在 macOS 和 Windows 的 Claude Desktop app 正式 GA，新增 OpenTelemetry 支援與企業角色存取控制（RBAC）。Anthropic 也更新了 Web search 和 Web fetch 工具，支援動態過濾，減少 token 消耗。這一系列動作代表 Claude 的定位從「AI 聊天工具」全面轉型為「企業工作流引擎」。</p>
+      <p>對創作者 AI 工具開發的啟示：Office 整合模式顯示，未來 AI 助手的最大價值在於「零阻力嵌入用戶已有的工作環境」，而非讓用戶切換到新的 AI 平台。SHōW YŌU 開發創作者 AI 工具時，應優先考慮與創作者現有工作流（直播軟體、社群後台）的整合深度。</p>
+      <a class="news-source" href="https://www.financialcontent.com/article/abnewswire-2026-4-13-anthropic-rolls-out-claude-for-word-add-in-now-full-microsoft-office-suite-word-excel-powerpoint-natively-supports-claude" target="_blank">來源：FinancialContent — Anthropic Rolls Out Claude for Word Add-in: Now Full Microsoft Office Suite Natively Supports Claude →</a>
+    </div>
+
+    <div class="news-card">
+      <h3>Claude Code 五週 30+ 版本迭代：1M context、/team-onboarding、Write 工具速度提升 60%</h3>
+      <p>Claude Code 在 3 月底至 4 月中進行了有史以來最密集的迭代，從 v2.1.69 推進至 v2.1.101，共超過 30 個版本。本週主要亮點包括：全面鋪開 Opus 4.6 的 1M context window；新增 /team-onboarding 指令，可從本機 Claude Code 使用紀錄自動生成新人上手指南；以及 Write 工具 diff 計算速度提升 60%，大幅加快大型檔案編輯效率。</p>
+      <p>安全性方面，這一批更新加入了 PID namespace 隔離、credential 自動遮蓋（scrubbing）、PowerShell 權限強化，以及一個 command injection 漏洞修補。NO_FLICKER 渲染引擎也在本週全面推出，解決了長期影響 TUI 使用體驗的閃爍問題。整體而言，Claude Code 正快速從「工程師個人工具」成熟為「企業級 AI 開發環境」。</p>
+      <a class="news-source" href="https://help.apiyi.com/en/claude-code-changelog-2026-april-updates-en.html" target="_blank">來源：Apiyi Blog — Decoding the Claude Code April 2026 Changelog: A Comprehensive Overview of 30+ Version Iterations →</a>
+    </div>
+
+    <div class="news-card">
+      <h3>GPT-5.4 Thinking 推出：推理 × 程式 × 代理工作流三合一，Pro 方案漲至 $100/月</h3>
+      <p>OpenAI 本週將 GPT-5.4 Thinking 加入 ChatGPT，這款模型將 GPT-5 系列的推理能力、程式撰寫、以及代理工作流整合成單一入口，在涉及文件、試算表、簡報的專業任務上表現顯著提升。此外，更新了 Box、Notion、Linear、Dropbox 的 app 整合，首次開放寫入操作（不再只讀），讓 ChatGPT 可以直接修改這些平台上的內容。</p>
+      <p>定價層面，OpenAI 同步推出 $100/月的 Pro 方案，包含無限 GPT-5.4 使用額度與 Codex 功能。AI 旗艦工具的定價已正式進入「月費百美元」水位——相較 Claude Max $100/月、Cursor Pro $20/月，整個 AI 工具市場的月訂閱天花板正在快速拉高，但頂層用戶的 willingness to pay 也在同步驗證。</p>
+      <a class="news-source" href="https://imidef.com/en/2026-04-05-chatgpt-new-features-april-2026" target="_blank">來源：imidef.com — ChatGPT New Features in April 2026: GPT-5.4 Thinking, File Library, and More →</a>
+    </div>
+
+    <div class="news-card">
+      <h3>Google Gemma 4 開源發布：31B 模型競程能力 20x 提升，多模態支援文字/圖片/影片</h3>
+      <p>Google 在 4 月 3 日發布 Gemma 4，這是 Gemini 3.1 的開源版本衍生系列，Apache 2.0 授權，提供 2.3B 至 31B 四個規格，全系列原生支援文字、圖片、影片多模態輸入。31B Dense 版本在全球開源模型排名中位列第三，Codeforces ELO（競程解題能力指標）從 Gemma 3 的 110 跳躍至 2150，進步幅度高達 20 倍。</p>
+      <p>Gemma 4 的發布意味著高品質開源模型的能力天花板再次大幅提升，對於 AI 應用開發成本有直接影響：想要做 on-premise 部署或自訂微調的團隊，現在有了遠比一年前更強的開源基礎可用。對 SHōW YŌU 評估創作者 AI 工具（如 AI 虛擬分身）的底層模型選擇時，開源選項已不再是效能妥協。</p>
+      <a class="news-source" href="https://english.news.cn/northamerica/20260403/3c3bdb9b42054ebd887a5daf5a8cfa2c/c.html" target="_blank">來源：Xinhua — Google launches open model Gemma 4 →</a>
+    </div>
+  </div>
+
+  <!-- Section 3: 競品動態 -->
+  <div class="section">
+    <div class="section-title">競品動態</div>
+
+    <div class="news-card">
+      <div class="platform-label">BigoLive</div>
+      <h3>BigoLive 慶 10 周年：4/9 更新上線，App Store 社交類排行維持前五 <span class="badge badge-gray">持續觀察</span></h3>
+      <p>BigoLive 於 4 月 9 日推送新版本更新，並同步啟動「Bigo 10th Anniversary」慶典活動。從 App Store 排名數據來看，BigoLive 目前在「Top Grossing Social Apps」維持第 5 位，顯示付費用戶基礎仍然穩固。公開資訊中未見本週有重大功能更新或創作者政策調整。</p>
+      <p>BigoLive 的 10 周年節點值得關注：類似規模的平台在周年節點通常會釋出較大型的創作者激勵計畫或用戶成長活動，若後續有創作者分潤或禮物機制的重大調整，對台灣與東南亞的直播生態將有連鎖影響，建議持續追蹤官方公告。</p>
+      <a class="news-source" href="https://www.apkmirror.com/apk/bigo-technology-pte-ltd/bigo-live-live-stream-live-video-live-chat/bigo-live-live-stream-live-video-live-chat-5-17-3-release/" target="_blank">來源：APKMirror — Bigo Live 5.17.3 Release →</a>
+    </div>
+
+    <div class="news-card">
+      <div class="platform-label">Passes</div>
+      <h3>Passes 競爭態勢加劇：7 種變現工具 + 10% 抽成，正面挑戰 Patreon 與 OnlyFans <span class="badge badge-orange">值得追蹤</span></h3>
+      <p>雖然 Eric Bellinger 加入 Passes 的新聞發生在 3 月 29 日（本週範圍邊緣），但本週市場對 Passes vs. Patreon vs. OnlyFans 的比較討論熱度持續攀升。Passes 目前提供的 7 種收入工具包括：訂閱制（含限量版本）、付費私訊 DM、付費群組聊天、商品販賣、直播打賞、數位商品下載、1-on-1 付費視訊通話，是目前市場上功能最完整的 all-in-one 創作者平台。</p>
+      <p>Passes 的抽成 10%（相較 Patreon 的 8–12%）加上 anti-screenshot 技術保護，正在吸引高單價內容創作者（尤其是成人內容和名人）遷移。平台迄今已向創作者累積支付「九位數美元」金額，並完成 $66.6M 融資。在「多元變現工具 × 低抽成 × 內容保護」的組合訴求上，Passes 的定位與 SHōW YŌU 有部分重疊，值得持續研究其創作者獲取與留存策略。</p>
+      <a class="news-source" href="https://techbullion.com/the-creator-platform-war-of-2026-how-patreon-whop-onlyfans-and-passes-stack-up/" target="_blank">來源：TechBullion — The Creator Platform War of 2026: How Patreon, Whop, OnlyFans, and Passes Stack Up →</a>
+    </div>
+
+    <div class="news-card">
+      <div class="platform-label">TikTok</div>
+      <h3>TikTok 東南亞 MAU 突破 4 億，Shop 廣告主新激勵方案 4/1 上線</h3>
+      <p>根據最新數據，TikTok 在東南亞的月活躍用戶於 2026 年 Q1 突破 4 億，持續鞏固其在東南亞最大社群媒體的地位。電商端，TikTok Shop 從 4 月 1 日起針對新廣告主推出強化激勵方案，目標加速其在東南亞電商的市場份額擴張。同時 2026 年 TikTok Shop 知識產權審查力度大幅加強，平台品質管控方向更趨嚴格。</p>
+      <p>TikTok 東南亞的體量繼續膨脹，對我們在台灣和東南亞的市場布局是雙面影響：一方面，創作者更難捨棄 TikTok 的流量基礎；另一方面，TikTok 作為「打賞 + 電商」的複合平台也越來越重，創作者開始需要一個「變現更深度」的補充平台，這恰好是 SHōW YŌU 可以定位的缺口。</p>
+      <a class="news-source" href="https://www.warc.com/content/feed/southeast-asia-is-new-focus-for-tiktok-shop/en-GB/7239" target="_blank">來源：WARC — Southeast Asia is new focus for TikTok Shop →</a>
+    </div>
+
+    <div class="news-card">
+      <div class="platform-label">Substack</div>
+      <h3>Substack 內部自然增長爆發：三個月從 app 內帶入 3200 萬新訂閱者，影音 Notes 佔比達三分之一</h3>
+      <p>Substack 本週披露最新增長數據：過去三個月，共有 3200 萬新訂閱從 Substack app 內部流量（而非外部推廣）產生，顯示平台已形成自我驅動的內容發現飛輪。Notes 功能的使用習慣也出現明顯改變——目前每三則 Notes 就有一則包含圖片或影片，Substack 也為此重新設計了媒體頁 tab 的呈現方式。</p>
+      <p>更關鍵的是 Substack 的演算法調整：Notes 訊息流現在有意將內容推送給「從未追蹤過該作者」的用戶，大幅提升了小創作者的曝光機會，類似 TikTok 的 For You 邏輯。這讓 Substack 逐漸從「已有粉絲基礎的轉移平台」變成「從零建立受眾的冷啟動工具」，改變了平台對新創作者的吸引力結構。</p>
+      <a class="news-source" href="https://pettauer.net/en/substack-phenomenon-creators-guide-2026/" target="_blank">來源：pettauer.net — The Substack Phenomenon: A Creator's Guide (2017–2026) →</a>
+    </div>
+  </div>
+
+  <!-- Section 4: Creator Economy 市場 -->
+  <div class="section">
+    <div class="section-title">Creator Economy 市場</div>
+
+    <div class="news-card">
+      <h3>Picsart 開放全創作者變現計畫（4/6）：無粉絲門檻，依互動量結算收入 <span class="badge badge-green">本週新發布</span></h3>
+      <p>AI 設計平台 Picsart 於 4 月 6 日宣布開放創作者變現計畫，無需邀請、無粉絲數門檻。創作者用 Picsart 工具製作指定主題內容、發布到自己的社群帳號，平台根據瀏覽量、留言、分享與觸及率計算收益，並透過 Stripe 提取。</p>
+      <p>這個模式的本質是「廣告主預算 → 創作者 → 平台工具」的閉環：Picsart 借助創作者的社群影響力做品牌推廣，創作者則獲得直接的現金收入，完全不需要平台自有的粉絲訂閱基礎。這個方向代表「Creator = Channel，而非 Creator = Product」的新型變現邏輯，是對傳統訂閱分潤之外的另一條路，值得了解創作者端的接受度。</p>
+      <a class="news-source" href="https://techcrunch.com/2026/04/06/ai-design-platform-picsart-launches-a-creator-monetization-program/" target="_blank">來源：TechCrunch — Picsart now lets creators make money from their designs →</a>
+    </div>
+
+    <div class="news-card">
+      <h3>Creator TV 正式成為獨立媒體類別：6600 個 YouTube 頻道、1360 億年播放量、52% 在電視螢幕收看</h3>
+      <p>Spotter 於 4 月 2 日發布報告，將「Creator TV」定義為一個有別於傳統電視和 UGC 短影音的全新媒體類別。美國境內共有 6600 個 YouTube 頻道符合 Creator TV 標準（長形內容、穩定更新、有固定受眾），這些頻道在 2025 年累積 1360 億次播放、264 億小時觀看時間，其中 52% 的觀看來自電視連網螢幕（Connected TV）。</p>
+      <p>電視螢幕觀看比例過半是一個重要訊號：Creator 內容不再是「手機上滑過去的碎片」，而是正式進入客廳屏幕的「電視節目替代品」。這個趨勢對直播平台的長期定位有參考意義——SHōW YŌU 目前以即時打賞互動為核心，如果直播內容也能往「電視節目品質 × 即時互動」的方向發展，進入 Creator TV 的場景可能是一個潛在的白地。</p>
+      <a class="news-source" href="https://nationaltoday.com/us/ca/los-angeles/news/2026/04/07/the-tech-powering-the-creator-economys-rapid-growth/" target="_blank">來源：Los Angeles Today — The Tech Powering the Creator Economy's Rapid Growth →</a>
+    </div>
+
+    <div class="news-card">
+      <h3>直播電商出現大規模整合洗牌：Flip 關閉、Popshop 被收購，只剩 Whatnot 和 TalkShopLive 獨立存活</h3>
+      <p>創作者經濟投融資報告顯示，直播電商賽道在過去 6 個月出現顯著洗牌：Flip 在累計募資 $2.32 億後關閉；Popshop Live 在融資 $2500 萬後被收購；目前仍獨立運作的僅剩 Whatnot 和 TalkShopLive。同期，Bending Spoons 於 2025 年 9 月以 $13.8 億收購 Vimeo，直播基礎設施層也在整合。</p>
+      <p>AI 原生工具和創作者變現基礎設施是目前吸引資金的主要方向，2025 年 11 月至 2026 年 3 月間共有 12 筆交易、$1.59 億以上的披露融資集中在這兩個領域。印度也在快速崛起為創作者電商新興市場。對 SHōW YŌU 的啟示：直播 + 電商的結合不是必然成功的公式，但直播 + 深度打賞互動 + 訂閱的垂直深耕路徑，在目前的市場環境下具有更可持續的商業邏輯。</p>
+      <a class="news-source" href="https://newmarketpitch.com/blogs/news/creator-economy-funding-news" target="_blank">來源：New Market Pitch — Creator Economy Funding News (April 2026) →</a>
+    </div>
+  </div>
+
+  <!-- Section 5: 對 SHōW YŌU 平台的建議 -->
+  <div class="section">
+    <div class="section-title">對 SHōW YŌU 平台的建議</div>
+
+    <div class="rec-card">
+      <div class="rec-num">1</div>
+      <div class="rec-body">
+        <h3>把「AI 工具嵌入現有工作流」當作 Minikorn / EchoFans 的設計原則</h3>
+        <p>本週最核心的 AI 設計趨勢是「嵌入而非取代」——Claude 嵌入 Word、GPT 嵌入 Notion/Linear、Meta AI 嵌入 Instagram。用戶不想切換到新的 AI 應用，他們要 AI 在他們本來就工作的地方出現。SHōW YŌU 的 AI 工具（Minikorn AI 分身、EchoFans 粉絲互動）應該優先設計「在直播後台、在創作者熟悉的管理介面裡出現」，而不是另開一個獨立的 AI 應用。這會顯著降低創作者的使用摩擦，也會讓 AI 功能更快進入日常使用習慣。</p>
+      </div>
+    </div>
+
+    <div class="rec-card">
+      <div class="rec-num">2</div>
+      <div class="rec-body">
+        <h3>從 Passes 的 7 種變現工具學習：訂閱制之外，盤點 SHōW YŌU 可以新增哪些「高單價互動型收入」</h3>
+        <p>Passes 的核心差異化在於「7 種收入工具 + 10% 低抽成 + 數位內容保護」。其中對 SHōW YŌU 最有參考價值的是：付費私訊 DM（粉絲出費獲得創作者個人回覆）、1-on-1 付費視訊通話（高單價、深度互動）。這兩種工具的單次金額可以遠超打賞禮物，且與「AI 虛擬分身」功能天然互補——AI 分身可以先做大量基礎互動，人工版的 1-on-1 就成為稀缺的高價值服務層。訂閱制上線後，可以評估這些工具作為附加收入層的優先級。</p>
+      </div>
+    </div>
+
+    <div class="rec-card">
+      <div class="rec-num">3</div>
+      <div class="rec-body">
+        <h3>Meta Muse Spark 全面進入 Instagram：評估 AI 功能對直播主粉絲互動生態的潛在衝擊</h3>
+        <p>Meta 把 Muse Spark 整合進 Instagram 和 WhatsApp，意味著未來幾個月 Instagram 的 AI 互動能力（AI 自動回覆、個人化推薦、AI 直播陪伴）將大幅升級。台灣和東南亞的創作者與粉絲高度依賴 Instagram 互動，如果 Instagram 的 AI 工具做得夠好，創作者在第三方平台花時間做粉絲互動的動機就會下降。現在的窗口期是：在 Meta AI 工具還沒完全成熟之前，讓我們的 EchoFans 功能先建立創作者黏性和使用習慣。Q2 AI 工具上線的時間優先級不應再延遲。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 6: 下週持續追蹤 -->
+  <div class="section">
+    <div class="section-title">下週持續追蹤</div>
+    <div class="watch-list">
+      <div class="watch-item">Meta Muse Spark 的 Instagram / WhatsApp 整合進度——一旦在社交平台上推出 AI 直播伴隨功能，對我們 EchoFans 的設計將有直接參考意義</div>
+      <div class="watch-item">BigoLive 10 周年活動後續：是否釋出新的創作者激勵計畫或禮物機制調整？對台灣與東南亞直播市場的分潤競爭直接相關</div>
+      <div class="watch-item">OpenAI「Spud（GPT-5.5）」計畫——據報導預計本月內發布，若性能再次大幅跳躍，AI 工具競爭格局將再次洗牌</div>
+      <div class="watch-item">Substack TV 在 Apple TV / Google TV 的實際鋪開進度：影音訂閱平台的新戰場正在成型，有助於理解「訂閱 × 影音」的用戶接受度</div>
+      <div class="watch-item">TikTok Shop 東南亞 IP 審查政策收緊後，對中小型創作者帶貨生態的實際影響——可以從台灣 MCN 端收集第一手回饋</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  SHōW YŌU Product Team &nbsp;·&nbsp; AI 市場週報 第四期 &nbsp;·&nbsp; 2026-04-14<br>
+  本報告由 Claude AI 輔助生成，資訊以公開來源為準，市場數據建議交叉驗證後使用。
+</div>
+
+</body>
+</html>
