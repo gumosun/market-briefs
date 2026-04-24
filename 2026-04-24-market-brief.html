@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>市場週報 第五期 — 2026-04-24</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans TC', 'Noto Sans', sans-serif; background: #F7F7F7; color: #333333; line-height: 1.8; }
+
+  /* Header */
+  .page-header { background: #1A1A1A; color: #fff; padding: 48px 40px 40px; }
+  .header-label { font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #F47920; margin-bottom: 14px; }
+  .header-title { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+  .header-meta { font-size: 14px; color: #999; margin-top: 6px; }
+  .header-meta span { color: #F47920; font-weight: 600; }
+
+  /* Container */
+  .container { max-width: 860px; margin: 0 auto; padding: 44px 24px 60px; }
+
+  /* Section */
+  .section { margin-bottom: 44px; }
+  .section-title {
+    font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    color: #F47920; margin-bottom: 20px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .section-title::after { content: ''; flex: 1; height: 1px; background: #F47920; opacity: 0.2; }
+
+  /* Highlight box */
+  .highlight-list { display: flex; flex-direction: column; gap: 12px; }
+  .highlight-item {
+    background: #fff;
+    border-left: 5px solid #F47920;
+    border-radius: 0 10px 10px 0;
+    padding: 18px 22px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  .highlight-item .label {
+    font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+    color: #F47920; margin-bottom: 6px;
+  }
+  .highlight-item .text { font-size: 17px; font-weight: 600; color: #1A1A1A; line-height: 1.6; }
+  .highlight-item .sub { font-size: 14px; color: #666; margin-top: 4px; }
+
+  /* News card */
+  .news-card {
+    background: #fff;
+    border-radius: 12px;
+    border-top: 4px solid #F47920;
+    padding: 22px 24px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-bottom: 16px;
+  }
+  .news-card h3 { font-size: 18px; font-weight: 700; color: #1A1A1A; margin-bottom: 12px; line-height: 1.5; }
+  .news-card p { font-size: 17px; color: #444; line-height: 1.85; margin-bottom: 10px; }
+  .news-card p:last-of-type { margin-bottom: 8px; }
+  a.news-source {
+    font-size: 13px; color: #aaa; text-decoration: none;
+    border-bottom: 1px dashed #ddd; transition: color 0.2s;
+    display: inline-block; margin-top: 4px;
+  }
+  a.news-source:hover { color: #F47920; }
+
+  /* Platform sub-group */
+  .platform-label {
+    font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+    color: #fff; background: #1A1A1A; display: inline-block;
+    padding: 4px 12px; border-radius: 4px; margin-bottom: 10px;
+  }
+
+  /* Recommendation card */
+  .rec-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 22px 24px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-bottom: 16px;
+    display: flex; gap: 18px; align-items: flex-start;
+  }
+  .rec-num {
+    background: #F47920; color: #fff;
+    font-size: 18px; font-weight: 900;
+    width: 38px; height: 38px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .rec-body { flex: 1; }
+  .rec-body h3 { font-size: 18px; font-weight: 700; color: #1A1A1A; margin-bottom: 8px; }
+  .rec-body p { font-size: 17px; color: #444; line-height: 1.85; }
+
+  /* Watch list */
+  .watch-list { display: flex; flex-direction: column; gap: 10px; }
+  .watch-item {
+    background: #fff;
+    border-radius: 10px;
+    padding: 16px 20px;
+    font-size: 17px; color: #333;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    display: flex; align-items: flex-start; gap: 12px;
+  }
+  .watch-item::before { content: '→'; color: #F47920; font-weight: 700; flex-shrink: 0; }
+
+  /* Badge */
+  .badge { display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 9px; border-radius: 4px; margin-left: 8px; vertical-align: middle; }
+  .badge-orange { background: #FFF3E0; color: #E65100; }
+  .badge-green { background: #E6F9F0; color: #1a7a4a; }
+  .badge-gray { background: #F0F0F0; color: #666; }
+
+  /* Footer */
+  .footer { text-align: center; padding: 36px 24px; font-size: 12px; color: #bbb; }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div class="header-label">SHōW YŌU Product Team</div>
+  <div class="header-title">AI 市場週報 — 第五期</div>
+  <div class="header-meta">
+    涵蓋期間：<span>2026 年 4 月 15 日 — 4 月 24 日</span>　｜　發布日期：2026-04-24
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- Section 1: 本週重點摘要 -->
+  <div class="section">
+    <div class="section-title">本週重點摘要</div>
+    <div class="highlight-list">
+      <div class="highlight-item">
+        <div class="label">AI 大事</div>
+        <div class="text">OpenAI 發布 GPT-5.5（4/23）：強化 agentic coding、電腦操作、知識工作，直接挑戰 Claude Opus 4.7 的開發者市場</div>
+        <div class="sub">GPT-5.4 上線僅兩個月後的快速迭代，代理型 AI 競賽進入月度更新節奏</div>
+      </div>
+      <div class="highlight-item">
+        <div class="label">AI 工具</div>
+        <div class="text">Anthropic 承認 Claude 近期「升級」讓品質下滑（4/23），已修復並重設訂閱限制；Claude Code 同步從 $20 Pro 下架，改從 $100 Max 起（4/21）</div>
+        <div class="sub">AI 工具使用體驗的不穩定期尚未結束，團隊工具選型需預留備援方案</div>
+      </div>
+      <div class="highlight-item">
+        <div class="label">競品</div>
+        <div class="text">Passes 宣布品牌升級為「Creator Accelerator」（4/22）：從單純變現平台重新定位為「創作者事業加速器」</div>
+        <div class="sub">用語重塑的意義大於視覺更新——直接對標 Patreon、挑戰創作者平台的價值主張語言</div>
+      </div>
+      <div class="highlight-item">
+        <div class="label">競品</div>
+        <div class="text">Patreon 推出全新 creator page（4/15）：Home Tab 取代時間軸動態流，創作者可自訂 collection、shop、livestream 等內容櫃</div>
+        <div class="sub">從「內容訂閱」走向「個人品牌首頁」——這是 ShowYou 未來主頁設計的關鍵對標</div>
+      </div>
+      <div class="highlight-item">
+        <div class="label">Creator Economy</div>
+        <div class="text">美國創作者廣告市場 2026 達 $37.1B（IAB 數據），AI 驅動變現可讓創作者收入提升 35–60%</div>
+        <div class="sub">AI 與創作者經濟的結合已從「輔助」進入「直接變現」階段，ShowYou 的 AI 雙引擎剛好踩在這個節奏上</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 2: AI 技術與工具落地 -->
+  <div class="section">
+    <div class="section-title">AI 技術與工具落地</div>
+
+    <div class="news-card">
+      <h3>OpenAI 發布 GPT-5.5：強化代理、程式、知識工作能力</h3>
+      <p>OpenAI 於 4 月 23 日發布 GPT-5.5，距離 GPT-5.4 上線僅兩個月，官方稱其為「最聰明、最直覺的模型」。新模型在 agentic coding、computer use、知識工作與早期科學研究場景有顯著提升，主打文件處理、試算表生成、線上研究等企業端應用。</p>
+      <p>GPT-5.5 已向 Plus / Pro / Business / Enterprise 訂戶推送，同時進入 Codex。API 定價為每百萬輸入 token $5、輸出 $30，context window 為 1M。從節奏上看，OpenAI 已進入月度迭代，直接對標 Anthropic 的 Opus 系列，這是過去一年代理型 AI 競賽最快的一次產品循環。</p>
+      <a class="news-source" href="https://techcrunch.com/2026/04/23/openai-chatgpt-gpt-5-5-ai-model-superapp/" target="_blank">來源：TechCrunch — OpenAI releases GPT-5.5 →</a>
+    </div>
+
+    <div class="news-card">
+      <h3>Anthropic 承認 Claude 品質下滑、已修復並重設訂閱用量</h3>
+      <p>The Register 於 4 月 23 日報導，Anthropic 公開承認 3 月至 4 月間對 Claude Code、Agent SDK、Claude Cowork 做的三項變更實際上降低了輸出品質。問題包括預設 reasoning effort 被偷降、caching bug 導致 thinking history 掉失、以及一個影響 coding 品質的 verbosity prompt 變更。</p>
+      <p>Anthropic 已在官方公告中確認全部回滾、並為付費訂戶重置用量限制。這件事對 PM 團隊的直接啟示是：AI 工具的「品質回歸」並非單次事件，而是長期需要監控的穩定性問題，若要把 Claude Code / GPT-5.5 納入工作流，需預留備援方案（例如同時保留 OpenAI + Anthropic 帳號）。</p>
+      <a class="news-source" href="https://www.theregister.com/2026/04/23/anthropic_says_it_has_fixed/" target="_blank">來源：The Register — Anthropic admits it dumbed down Claude →</a>
+    </div>
+
+    <div class="news-card">
+      <h3>Claude Code 從 $20 Pro 方案下架、改從 Max 5x 方案起</h3>
+      <p>Anthropic 於 4 月 21 日靜默地將 Claude Code 從 $20 Pro 方案中移除，使用權現在從 Max 5x 方案（$100/月）起跳。對於原本靠 Pro 方案使用 Claude Code 的個人開發者和小型團隊來說，月成本直接躍升 5 倍。</p>
+      <p>這個調整與 OpenAI 4 月將 Pro 方案調漲至 $100 是同一條節奏——頂層 AI 工具的月訂閱成本正式進入「百元美金起跳」的新水位，對創作者工具和自動化工作流的預算規劃影響顯著。如果 ShowYou 內部有多人使用 Claude Code（PM、工程），成本結構需重新估算。</p>
+      <a class="news-source" href="https://pasqualepillitteri.it/en/news/1211/claude-code-removed-pro-plan-anthropic-april-2026" target="_blank">來源：Pasquale Pillitteri — Claude Code Removed from Pro Plan →</a>
+    </div>
+
+    <div class="news-card">
+      <h3>Claude Code 上線 Ultraplan、Monitor Tool 與 PR Auto-fix</h3>
+      <p>Anthropic 於 4 月持續推送 Claude Code 的新功能。Ultraplan（早期預覽）讓你從 CLI 草擬計畫後在雲端 web editor 上檢視並給 comment，再遠端執行或拉回本地；Monitor tool 將背景事件即時串流進對話，讓 Claude 可以 tail log 並即時反應。</p>
+      <p>同時 `/team-onboarding` 把你的環境打包成可重播的 onboarding 指南，`/autofix-pr` 讓 PR 自動修正功能從 terminal 就能啟用。這些功能指向一個明確方向：AI 編碼助手正從「互動工具」升級為「團隊基礎設施」，配合 Opus 4.7 xhigh 模型與 1 小時 prompt cache 控制，長時間 agent 任務的實用性顯著提升。</p>
+      <a class="news-source" href="https://releasebot.io/updates/anthropic/claude-code" target="_blank">來源：Releasebot — Claude Code April 2026 Updates →</a>
+    </div>
+
+    <div class="news-card">
+      <h3>ChatGPT Images 2.0 上線、12 小時登頂 Image Arena</h3>
+      <p>OpenAI 於 4 月 21 日發布 ChatGPT Images 2.0，上線 12 小時內即登上 Image Arena leaderboard 全類別第一名，領先第二名 +242 分。Images 2.0 的關鍵提升在生成一致性與角色穩定性，讓多圖劇情連貫、品牌視覺統一成為現實。</p>
+      <p>對創作者平台的意義：AI 生成圖像已經從「圖像生成工具」進入「內容生產基礎設施」，創作者可直接產出封面、角色立繪、直播宣傳素材，這會進一步加速「創作者產出速度」的變化。ShowYou 未來的 AI 工具若要納入圖像生成，現在是評估供應商的好時機。</p>
+      <a class="news-source" href="https://www.buildfastwithai.com/blogs/chatgpt-images-2-0-gpt-image-2-2026" target="_blank">來源：Build Fast with AI — ChatGPT Images 2.0 Breakdown →</a>
+    </div>
+
+    <div class="news-card">
+      <h3>MCP 邁入企業級部署階段，遠端執行成為標配</h3>
+      <p>Hackaday 於 4 月 24 日發布關於 Anthropic Model Context Protocol（MCP）遠端執行架構的深度報導，說明 MCP 如何讓 LLM 直接操作遠端系統。同時 zMaticoo 在 4 月 21 日發布自家的 MCP 實作，強化 AI 對商業數據的存取能力。</p>
+      <p>自 2024 年 11 月推出以來，MCP 已在 16 個月內累積 97M 月下載量、10,000+ live server，並獲 OpenAI、Google、Microsoft、AWS、Cloudflare 採用。2026 MCP Roadmap 重點是 transport scalability、agent 通訊、治理成熟度、企業就緒——這代表企業端 AI 整合已有共通標準，ShowYou 若規劃讓 AI 工具串接內部 CRM、數據系統、Slack 等，MCP 是必備的技術骨幹。</p>
+      <a class="news-source" href="https://hackaday.com/2026/04/24/how-anthropics-model-context-protocol-allows-for-easy-remote-execution/" target="_blank">來源：Hackaday — How MCP Allows Easy Remote Execution →</a>
+    </div>
+  </div>
+
+  <!-- Section 3: 競品動態 -->
+  <div class="section">
+    <div class="section-title">競品動態</div>
+
+    <div class="news-card">
+      <div class="platform-label">Passes</div>
+      <h3>Passes 品牌升級：從 Creator Monetization 改為 Creator Accelerator</h3>
+      <p>Passes 於 4 月 22 日宣布全面品牌升級，自我定位從「創作者變現平台」改為「創作者加速器（Creator Accelerator）」。新 logo 結合字母「P」與訊息氣泡，致敬 Passes 最賺錢的核心功能——DM 直接對話變現。</p>
+      <p>這次更新的關鍵不在視覺，而在語言重塑：Passes 不再只是「賣訂閱」，而是「幫創作者建立長期事業」的基礎設施，對標 Patreon、OnlyFans 的同時擴大市場敘事。平台簽下如 NIL 收入第一的 Livvy Dunne、DJ Kygo（Spotify 20 億次播放）等名人，強化高單價創作者形象。ShowYou 的平台定位語言（變現基地 + AI 工具 + 終點站非競品）方向正確，但需加強「加速器」而非「工具」的敘事。</p>
+      <a class="news-source" href="https://www.prnewswire.com/news-releases/passes-rebrands-as-the-creator-accelerator-platform-302749690.html" target="_blank">來源：PR Newswire — Passes Rebrands as the Creator Accelerator Platform →</a>
+    </div>
+
+    <div class="news-card">
+      <div class="platform-label">Patreon</div>
+      <h3>Patreon 全新 creator page 上線：Home Tab 取代時間軸</h3>
+      <p>Patreon 於 4 月 15 日釋出近年最大的創作者頁面改版。Home Tab 成為粉絲預設進入頁面，傳統時間軸貼文流被降為次要 tab。創作者可自訂 content shelves，把 collections、products、livestreams、podcasts、merch 組合成「個人品牌首頁」而非「貼文列表」。</p>
+      <p>視覺上可自訂 header 圖、品牌色、profile photo，導覽列也可重排，把粉絲直接導向外部電商、活動或精選內容。這是 Patreon 從「訂閱制內容平台」轉向「創作者品牌基地」的關鍵一步，對 ShowYou 的意義是：當訂閱制 Q2 上線後，創作者首頁設計應避開「打賞+訂閱列表」的思維，而要往「品牌首頁 + 多元內容櫃」的方向規劃。</p>
+      <a class="news-source" href="https://support.patreon.com/hc/en-us/articles/36972391815693-Your-updated-creator-page" target="_blank">來源：Patreon Help — Your updated creator page →</a>
+    </div>
+
+    <div class="news-card">
+      <div class="platform-label">TikTok</div>
+      <h3>TikTok 直播新功能：Scaled Live Rewards 與競標 Countdown bidding</h3>
+      <p>TikTok 本月為直播主新增數項功能：Scaled Live Rewards（規模化直播獎勵）、Countdown bidding（直播競標倒數計時）、live highlights 對 gifter 的分享機制、即時 Live comment 互動升級。這些更新的核心是強化「直播變現的遊戲化設計」，尤其 Countdown bidding 把競標玩法直接整合進直播。</p>
+      <p>對 ShowYou 的直接啟示：打賞機制雖是核心營收，但 TikTok 正在把直播變現的「玩法密度」快速拉高——從單次打賞到階段式獎勵、從一次性互動到拍賣倒數——這是台灣與東南亞直播主會直接比較的功能列表。ShowYou 需評估打賞遊戲化（例如階段式 Live Rewards、倒數拍賣）是否納入 H2 Roadmap。</p>
+      <a class="news-source" href="https://socialbee.com/blog/tiktok-updates/" target="_blank">來源：SocialBee — 2026 TikTok Updates →</a>
+    </div>
+  </div>
+
+  <!-- Section 4: Creator Economy 市場 -->
+  <div class="section">
+    <div class="section-title">Creator Economy 市場</div>
+
+    <div class="news-card">
+      <h3>美國創作者廣告市場 2026 達 $37.1B，AI 驅動變現將是關鍵推力</h3>
+      <p>根據 IAB 報告，2026 年美國創作者廣告支出達 $37.1B，預計 2027 年再升至 $43.9B，創作者行銷正式被視為「core media channel」。但同時平台競爭加劇、organic reach 下滑，使「變現基礎設施的成熟度」成為創作者選平台的首要考量。</p>
+      <p>另一份業界報告指出，運用 AI 驅動變現優化策略的創作者收入可提升 35–60%，不需增加內容產出或擴大粉絲基數。ML 演算法可在粉絲取消訂閱前 30 天就預測流失風險，並透過個人化互動維持關係。這些數據直接支持 ShowYou Q2 AI 雙引擎（Minikorn + EchoFans）的策略——AI 不只是輔助創作，而是直接拉高創作者 LTV 的關鍵基礎設施。</p>
+      <a class="news-source" href="https://www.marketingdive.com/news/creator-marketing-now-a-core-media-channel-while-search-slows-iab/817832/" target="_blank">來源：Marketing Dive — IAB: Creator marketing now a core media channel →</a>
+    </div>
+
+    <div class="news-card">
+      <h3>AI 驅動的創作者變現——機器學習已進入「預測流失」階段</h3>
+      <p>FinancialContent 於 4 月 20 日發表報告，指出創作者變現的下一個典範是「AI 驅動的預測式變現」。關鍵技術包括：粉絲流失預測（取消訂閱前 30 天預警）、動態定價（根據粉絲互動深度調整訂閱價）、個人化內容推薦（讓創作者產出命中特定粉絲偏好）。</p>
+      <p>報告指出，早期導入這類 AI 工具的創作者收入提升 35–60%，而且不依賴粉絲基數擴張。對 ShowYou 的意義：Minikorn（AI 內容製作）與 EchoFans（粉絲陪伴）應該進一步思考「數據層」——不只是 AI 幫忙產內容/回應，而是透過數據模型幫創作者「提前看見」粉絲關係的變化，這是真正能拉高 ARPPU 的 AI 工具定位。</p>
+      <a class="news-source" href="https://www.financialcontent.com/article/abnewswire-2026-4-20-ai-powered-growth-new-trends-in-creator-monetization" target="_blank">來源：FinancialContent — AI-Powered Growth in Creator Monetization →</a>
+    </div>
+
+    <div class="news-card">
+      <h3>Yoola 推出音樂創作者 full-stack monetization 基礎設施</h3>
+      <p>Yoola 於 4 月 20 日發布 Yoola Music，一個專為音樂創作者設計的 distribution + monetization 平台，目標是填補「傳統音樂串流服務」與「影片為主的創作者經濟」之間的斷層。功能涵蓋發行、版權、變現、數據分析。</p>
+      <p>這反映創作者經濟正在進入「垂直基礎設施」階段——音樂、遊戲、教育、運動都出現專屬的變現平台。對 ShowYou 的啟示：平台若要維持「最高分成」的差異化定位，未來可能需要思考「垂直類別的工具套件」而不只是通用打賞機制，例如為音樂創作者、圖文創作者提供不同的變現工具組合。</p>
+      <a class="news-source" href="https://newsroom.submitmypressrelease.com/2026/04/20/yoola-launches-full-stack-infrastructure-for-music-creator-economy_2331644.html" target="_blank">來源：SubmitmyPressRelease — Yoola Music launches →</a>
+    </div>
+
+    <div class="news-card">
+      <h3>Nas.com 募資 $27M，AI 創業者經濟進入獨立變現階段</h3>
+      <p>Nas.com 於 4 月宣布 Khosla Ventures 領投的 $27M 募資，用於擴張針對 solopreneur（獨立創業者）的 AI 平台。核心定位是「零粉絲、零行銷預算、零技術背景」的創業者也能用 AI 建立事業。</p>
+      <p>這是過去 5 個月創作者經濟累積 12 筆、$159M 募資的一環，AI-native tooling 與創作者變現基礎設施仍是最熱門的投資主題。對 ShowYou 募資 Pre-A 的意義：投資人對「AI + Creator」敘事的接受度仍很高，但關鍵是要能證明 AI 工具如何「直接變現」而非「輔助工具」——Minikorn / EchoFans 的產品定位需要對應到這個敘事。</p>
+      <a class="news-source" href="https://ventureburn.com/nas-com-secures-27m-for-ai-creator-economy-growth/" target="_blank">來源：Ventureburn — Nas.com secures $27M →</a>
+    </div>
+  </div>
+
+  <!-- Section 5: 對 SHōW YŌU 平台的建議 -->
+  <div class="section">
+    <div class="section-title">對 SHōW YŌU 平台的建議</div>
+
+    <div class="rec-card">
+      <div class="rec-num">1</div>
+      <div class="rec-body">
+        <h3>重塑平台語言，從「變現工具」升級為「創作者加速器」</h3>
+        <p>Passes 改名為 Creator Accelerator 是本週最值得注意的敘事變化——這個語言正好呼應 Mike 定義的 ShowYou 定位（變現基地 + AI 工具 + 終點站非競品）。建議在投資人簡報、產品行銷、創作者招募素材上加強「Accelerator（加速器）」的敘事，明確區隔 ShowYou 與「直播打賞 App」的既有分類，讓高單價創作者看見平台的長期價值而非短期變現工具。</p>
+      </div>
+    </div>
+
+    <div class="rec-card">
+      <div class="rec-num">2</div>
+      <div class="rec-body">
+        <h3>AI 雙引擎加入「預測流失」與「動態互動」數據層</h3>
+        <p>本週 FinancialContent 報告與 IAB 數據都指向同一個結論：AI 驅動的創作者變現不是「做內容的 AI」而是「讀粉絲的 AI」。Minikorn 目前主要在內容生產，EchoFans 在互動陪伴——建議在 Q2 規劃中加入「粉絲關係數據層」：預測流失、識別高潛力粉絲、動態推薦互動時機。這是 35–60% 收入提升的真正來源，也是讓 AI 工具「直接拉高 ARPPU」而不只是「輔助功能」的關鍵設計。</p>
+      </div>
+    </div>
+
+    <div class="rec-card">
+      <div class="rec-num">3</div>
+      <div class="rec-body">
+        <h3>訂閱制創作者首頁對標 Patreon Home Tab 設計，避開時間軸思維</h3>
+        <p>Patreon 4/15 的創作者頁改版把 Home Tab 當預設頁面，傳統貼文流降為次要——這是從「內容訂閱」轉向「個人品牌首頁」的關鍵信號。ShowYou 訂閱制 Q2 上線時，若創作者首頁仍停留在「打賞按鈕 + 直播列表 + 貼文流」的思維，會落後競品一代。建議訂閱制設計時，把創作者首頁當成「可自訂的品牌櫥窗」來規劃：包含精選直播、訂閱方案、打賞目標、collection（影片/圖文集合）、商品（打賞禮物套組）等模組化區塊。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 6: 下週持續追蹤 -->
+  <div class="section">
+    <div class="section-title">下週持續追蹤</div>
+    <div class="watch-list">
+      <div class="watch-item">GPT-5.5 推出後 Anthropic Claude Opus 4.7 的迭代回應——若 Anthropic 推出新旗艦，AI 工具月預算規劃需要再次調整</div>
+      <div class="watch-item">Passes 改名為 Accelerator 後的市場反應——是否帶動 Patreon、OnlyFans 等平台跟進「定位語言重塑」</div>
+      <div class="watch-item">TikTok Scaled Live Rewards 的實際玩法細節——這可能是台灣/東南亞直播主最快會提出的「為什麼 ShowYou 沒有」的比較題</div>
+      <div class="watch-item">創作者經濟 AI-native 工具的募資節奏——特別是「預測流失」「動態定價」相關的新創，可作為 ShowYou AI 雙引擎的設計參考</div>
+      <div class="watch-item">17LIVE 本週無重大動態，下週觀察是否有 Q1 財報或新功能發布——特別是亞太地區的策略布局</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  SHōW YŌU Product Team · 市場週報第五期 · 2026-04-24
+</div>
+
+</body>
+</html>
